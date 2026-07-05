@@ -1,0 +1,51 @@
+recipe_id,name,ingredients,prep_time,instructions,difficulty,category,servings,rating,times_cooked,last_cooked_date
+1,Pancakes,"Flour:200:g, Milk:300:ml, Egg:2:whole, Sugar:20:g, Baking Powder:10:g",20,Mix ingredients. Cook on a hot pan until golden.,Easy,Breakfast,4,4,12,6/15/2026
+2,Scrambled Eggs,"Egg:3:whole, Butter:10:g, Salt:1:tsp, Pepper:0.5:tsp",10,Whisk eggs and cook in butter.,Easy,Breakfast,2,5,18,6/20/2026
+3,French Toast,"Bread:4:slices, Egg:2:whole, Milk:100:ml, Cinnamon:1:tsp",15,Dip bread in mixture and fry.,Easy,Breakfast,2,4,9,5/28/2026
+4,Omelette,"Egg:3:whole, Cheese:50:g, Butter:10:g",12,Cook eggs and fold with cheese.,Easy,Breakfast,1,4,15,6/18/2026
+5,Granola Bowl,"Yogurt:250:g, Granola:80:g, Honey:15:ml, Banana:1:whole",5,Combine all ingredients.,Easy,Breakfast,1,5,7,6/22/2026
+6,Chicken Salad,"Chicken Breast:200:g, Lettuce:100:g, Tomato:80:g, Olive Oil:20:ml",20,Cook chicken and toss with vegetables.,Easy,Lunch,2,4,10,6/11/2026
+7,Beef Burger,"Ground Beef:200:g, Burger Bun:2:whole, Cheese:40:g, Lettuce:30:g",30,Grill beef and assemble burger.,Medium,Lunch,2,5,13,6/14/2026
+8,Club Sandwich,"Bread:6:slices, Chicken Breast:150:g, Lettuce:40:g, Tomato:50:g",15,Layer ingredients between toasted bread.,Easy,Lunch,2,4,8,6/10/2026
+9,Chicken Wrap,"Tortilla:2:whole, Chicken Breast:180:g, Lettuce:50:g, Sauce:20:ml",20,Fill tortilla and roll tightly.,Easy,Lunch,2,4,6,6/8/2026
+10,Grilled Cheese,"Bread:2:slices, Cheese:80:g, Butter:15:g",10,Toast until cheese melts.,Easy,Lunch,1,5,20,6/25/2026
+11,Spaghetti Bolognese,"Spaghetti:250:g, Ground Beef:200:g, Tomato Sauce:250:ml",40,Cook pasta and prepare meat sauce.,Medium,Dinner,4,5,11,6/13/2026
+12,Chicken Alfredo,"Pasta:250:g, Chicken Breast:200:g, Cream:200:ml, Parmesan:50:g",35,Cook pasta and combine with sauce.,Medium,Dinner,4,5,9,6/17/2026
+13,Fried Rice,"Rice:300:g, Egg:2:whole, Carrot:50:g, Peas:50:g",25,Stir fry all ingredients.,Easy,Dinner,4,4,14,6/19/2026
+14,Beef Stir Fry,"Beef:250:g, Broccoli:100:g, Soy Sauce:30:ml",30,Cook beef and vegetables together.,Medium,Dinner,3,4,8,6/12/2026
+15,Grilled Salmon,"Salmon:250:g, Lemon:1:whole, Butter:20:g",25,Bake or grill salmon.,Medium,Dinner,2,5,7,6/21/2026
+16,Chicken Curry,"Chicken Breast:300:g, Curry Powder:20:g, Coconut Milk:250:ml",45,Simmer chicken in curry sauce.,Medium,Dinner,4,5,12,6/16/2026
+17,Lasagna,"Lasagna Sheets:250:g, Ground Beef:300:g, Cheese:150:g",60,Layer ingredients and bake.,Hard,Dinner,6,5,6,6/9/2026
+18,Vegetable Soup,"Carrot:100:g, Potato:150:g, Onion:80:g, Water:1000:ml",35,Boil vegetables until soft.,Easy,Dinner,4,4,10,6/6/2026
+19,Steak,"Beef Steak:300:g, Butter:20:g, Pepper:1:tsp",20,Season and grill steak.,Medium,Dinner,2,5,15,6/23/2026
+20,Roast Chicken,"Whole Chicken:1200:g, Butter:40:g, Garlic:5:cloves",90,Roast until fully cooked.,Hard,Dinner,6,5,5,6/5/2026
+21,Chocolate Cake,"Flour:300:g, Cocoa Powder:80:g, Egg:3:whole, Sugar:250:g",70,Bake until cooked.,Medium,Dessert,8,5,9,6/18/2026
+22,Brownies,"Flour:150:g, Cocoa Powder:60:g, Butter:120:g, Sugar:180:g",40,Bake in a square pan.,Easy,Dessert,9,5,13,6/11/2026
+23,Chocolate Chip Cookies,"Flour:250:g, Butter:150:g, Chocolate Chips:150:g",30,Bake until golden.,Easy,Dessert,20,5,16,6/22/2026
+24,Apple Pie,"Apple:500:g, Flour:250:g, Butter:120:g",70,Fill crust and bake.,Medium,Dessert,8,4,7,6/10/2026
+25,Cheesecake,"Cream Cheese:400:g, Sugar:120:g, Egg:2:whole",80,Bake and chill.,Hard,Dessert,8,5,8,6/14/2026
+26,Vanilla Ice Cream,"Milk:500:ml, Cream:250:ml, Sugar:120:g",240,Freeze after mixing.,Medium,Dessert,6,5,6,6/9/2026
+27,Fruit Salad,"Apple:2:whole, Banana:2:whole, Orange:2:whole",10,Mix chopped fruit.,Easy,Dessert,4,4,11,6/13/2026
+28,Banana Smoothie,"Banana:2:whole, Milk:300:ml, Honey:20:ml",5,Blend everything.,Easy,Breakfast,2,4,14,6/20/2026
+29,Avocado Toast,"Bread:2:slices, Avocado:1:whole",8,Mash avocado and spread on toast.,Easy,Breakfast,1,4,9,6/15/2026
+30,Chicken Nuggets,"Chicken Breast:300:g, Breadcrumbs:100:g, Egg:1:whole",25,Coat chicken and bake.,Medium,Lunch,4,5,10,6/17/2026
+31,Tuna Sandwich,"Bread:4:slices, Tuna:150:g, Mayonnaise:30:g",10,Mix tuna and assemble.,Easy,Lunch,2,4,8,6/8/2026
+32,Caesar Salad,"Lettuce:150:g, Chicken Breast:150:g, Parmesan:40:g",20,Mix all ingredients.,Easy,Lunch,2,5,7,6/6/2026
+33,Chicken Pizza,"Pizza Dough:300:g, Chicken Breast:150:g, Cheese:120:g",45,Bake until cheese melts.,Medium,Dinner,4,5,6,6/16/2026
+34,Pepperoni Pizza,"Pizza Dough:300:g, Pepperoni:120:g, Cheese:150:g",40,Bake until crispy.,Medium,Dinner,4,5,8,6/18/2026
+35,Shrimp Pasta,"Pasta:250:g, Shrimp:200:g, Garlic:3:cloves",30,Cook pasta and shrimp.,Medium,Dinner,3,4,5,6/7/2026
+36,Beef Tacos,"Tortilla:6:whole, Ground Beef:300:g, Cheese:80:g",25,Fill tortillas and serve.,Easy,Dinner,3,5,12,6/21/2026
+37,Chicken Quesadilla,"Tortilla:2:whole, Chicken Breast:150:g, Cheese:100:g",20,Cook until cheese melts.,Easy,Lunch,2,4,11,6/14/2026
+38,Garlic Bread,"Bread:1:loaf, Butter:60:g, Garlic:5:cloves",15,Bake until crispy.,Easy,Dinner,6,4,15,6/23/2026
+39,Mashed Potatoes,"Potato:500:g, Butter:50:g, Milk:100:ml",30,Boil and mash potatoes.,Easy,Dinner,4,5,10,6/12/2026
+40,Chicken Soup,"Chicken Breast:250:g, Carrot:100:g, Water:1200:ml",40,Simmer until cooked.,Easy,Dinner,4,5,9,6/11/2026
+41,Blueberry Muffins,"Flour:250:g, Blueberries:150:g, Milk:150:ml",35,Bake until risen.,Easy,Dessert,12,5,6,6/8/2026
+42,Cinnamon Rolls,"Flour:400:g, Cinnamon:15:g, Butter:80:g",90,Roll dough and bake.,Hard,Dessert,10,5,4,6/4/2026
+43,Rice Pudding,"Rice:150:g, Milk:500:ml, Sugar:80:g",40,Cook until creamy.,Easy,Dessert,6,4,5,6/5/2026
+44,Lemon Tart,"Flour:250:g, Lemon Juice:100:ml, Butter:100:g",60,Bake tart shell and fill.,Medium,Dessert,8,5,3,6/2/2026
+45,Chicken Fried Rice,"Rice:300:g, Chicken Breast:200:g, Egg:2:whole",25,Stir fry together.,Easy,Dinner,4,4,13,6/18/2026
+46,Turkey Sandwich,"Bread:4:slices, Turkey:150:g, Lettuce:30:g",10,Assemble ingredients.,Easy,Lunch,2,4,9,6/9/2026
+47,Egg Fried Rice,"Rice:300:g, Egg:3:whole, Soy Sauce:20:ml",20,Cook rice with eggs.,Easy,Dinner,4,4,11,6/13/2026
+48,Beef Chili,"Ground Beef:300:g, Beans:250:g, Tomato Sauce:300:ml",50,Simmer until thick.,Medium,Dinner,5,5,8,6/15/2026
+49,Strawberry Milkshake,"Strawberries:200:g, Milk:300:ml, Ice Cream:100:g",5,Blend until smooth.,Easy,Dessert,2,5,12,6/22/2026
+50,French Fries,"Potato:500:g, Oil:100:ml, Salt:2:tsp",25,Fry potatoes until crispy.,Easy,Lunch,4,5,20,6/24/2026

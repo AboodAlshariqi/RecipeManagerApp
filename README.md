@@ -41,6 +41,10 @@ apprecipes.csv     # Recipe data storage (created automatically on first run)
    pip install streamlit pandas
 3. Run the app:
    streamlit run RecipeApp.py
+   Here is the link to the app (https://recipemanagerapp-fat37gqdwiqnaktktoevd7.streamlit.app/)
+
+
+
 
 ## Author
 

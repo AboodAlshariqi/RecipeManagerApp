@@ -293,7 +293,7 @@ def mark_as_cooked(data,recipe_id,cooked_date=None):
     data(dataframe):All recipes with the updated cooking count and last cooked date
     """
     if cooked_date is None:
-        cooked_date=date.today()
+        cooked_date=str(date.today())
     for index in data.index:
         if data.loc[index, 'recipe_id']==recipe_id:
             data.loc[index, 'times_cooked']=data.loc[index, 'times_cooked']+1

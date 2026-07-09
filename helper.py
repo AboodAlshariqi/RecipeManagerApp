@@ -276,8 +276,102 @@ def scale_recipe(ingredient_str,original_servings,desired_servings):
     return scaled_string
 
     
-    
+#=================
+# COOKING HISTORY
+#=================
 
+def mark_as_cooked(data,recipe_id,cooked_date=None):
+    """
+    Updates the cooking history of a recipe.
+
+    Parameter:
+    data(dataframe):All recipes
+    recipe_id(int): ID of the recipe that was cooked
+    cooked_date(date): Date the recipe was cooked. If not provided use today's date
+
+    Returns:
+    data(dataframe):All recipes with the updated cooking count and last cooked date
+    """
+    if cooked_date is None:
+        cooked_date=date.today()
+    for index in data.index:
+        if data.loc[index, 'recipe_id']==recipe_id:
+            data.loc[index, 'times_cooked']=data.loc[index, 'times_cooked']+1
+            data.loc[index,'last_cooked_date']=cooked_date
+    return data
+
+def suggest_stale_recipes(data, days_threshold=30):
+
+    """
+    Finds recipes that have never been cooked or have not been cooked recently (30 days)
+
+    Parameter:
+    data(dataframe):All recipes
+    days_threshold(int): Number of days after which a recipe is considered stale
+    
+    Returns:
+    stale(dataframe): Recipes that needs to be cooked again
+    """
+    dates=pd.to_datetime(data['last_cooked_date'], format='mixed', errors='coerce')
+    never_cooked=dates.isna()
+    today=pd.to_datetime(date.today())
+    days_since_cooked=(today-dates).dt.days
+    not_cooked_recently=days_since_cooked>days_threshold
+    stale_recipes=[]
+    
+    for index in data.index:
+        if never_cooked[index] or not_cooked_recently[index]:
+            stale_recipes.append(index)
+
+    stale=data.loc[stale_recipes]
+    return stale    
+
+    
+#=================
+# SHOPPING LIST
+#=================
+def generate_shopping_list(data, recipe_ids):
+
+    """
+    Generates a list of ingredients from selected recipes.
+
+    Parameters:
+    data(dataframe): All recipes
+    recipe_ids(list): List of recipe IDs selected by the user
+
+    Returns:
+    all_ingredients(list): List containing all ingredients from selected recipes
+    """
+    all_ingredients=[]
+
+    for recipe_id in recipe_ids:
+        for index in data.index:
+            
+            if data.loc[index,'recipe_id']==recipe_id:
+                ingredient_string=data.loc[index,'ingredients']
+                ingredient_list=split_ingredients(ingredient_string)
+                all_ingredients.extend(ingredient_list)
+                break
+
+    return all_ingredients
+
+
+def merge_ingredients(ingredient_list):
+
+    """
+    Combines duplicated ingredients and calculates the total quantity required.
+
+    Parameters:
+    ingredient_list(list): List of ingredient dictionaries containing name, quantity, and unit
+
+    Returns:
+    result(list): Combined ingredient list with total quantities
+    """
+    
+    ingredients_df=pd.DataFrame(ingredient_list)
+    combined=ingredients_df.groupby(['name','unit'],as_index=False)['quantity'].sum()
+    result=combined.to_dict('records')
+    return result
 
 
 

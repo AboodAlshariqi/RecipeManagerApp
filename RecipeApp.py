@@ -1,5 +1,5 @@
 import streamlit as st
-from helper import load_recipes, get_all_recipes_summary, get_random_recipe, search_by_ingredient,add_recipe,save_recipes,filter_by_category,rate_recipe,sort_by_rating,split_ingredients,return_ingredients,scale_recipe
+from helper import load_recipes, get_all_recipes_summary, get_random_recipe, search_by_ingredient,add_recipe,save_recipes,filter_by_category,rate_recipe,sort_by_rating,split_ingredients,return_ingredients,scale_recipe,mark_as_cooked,suggest_stale_recipes,generate_shopping_list,merge_ingredients
 
 
 # Load recipe from CSV
@@ -11,7 +11,7 @@ st.write("Store, retrieve, and manage your favorite recipes.")
 
 # Sidebar menu
 menu = st.sidebar.radio("Choose an option:",
-                         [ "➕ Add New Recipe", "🕵🏼 Search by Ingredient", "📖 View All Recipes", "🎲 Random Recipe","🔎 Browse by Category","⭐ Rate a Recipe"])
+                         [ "➕ Add New Recipe", "🕵🏼 Search by Ingredient", "📖 View All Recipes", "🎲 Random Recipe","🔎 Browse by Category","⭐ Rate a Recipe","🛒 Shopping List","✔️ Cooking History"])
 
 #-------------
 # ADD RECIPE
@@ -76,6 +76,7 @@ elif menu == "📖 View All Recipes":
     st.header("📖 View All Recipes")
     summary=get_all_recipes_summary(recipes)
     st.dataframe(summary)
+    
 # ----------------------------
 # RANDOM RECIPE with SCALLING
 # ----------------------------
@@ -135,6 +136,60 @@ elif menu== "⭐ Rate a Recipe":
         st.success(f"Rated {selected_recipe} as {rating} stars.")
         st.dataframe(sort_by_rating(recipes))  
 
+
+# ----------------
+# SHOPPING LIST
+# ----------------
+
+elif menu=="🛒 Shopping List":
+    st.header("🛒 Shopping List")
+
+    recipe_names=recipes['name'].tolist()
+    selected_recipes=st.multiselect("Select recipes:",recipe_names)
+
+    if st.button("Generate Shopping List"):
+        if not selected_recipes:
+            st.warning("⛔ Please select at least one recipe.")
+        else:
+            selected_ids=recipes.loc[recipes['name'].isin(selected_recipes),'recipe_id'].tolist()
+            all_ingredients=generate_shopping_list(recipes,selected_ids)
+            shopping_list=merge_ingredients(all_ingredients)
+
+            st.subheader("🛒 Shopping List")
+
+            for ingredient in shopping_list:
+                st.write(f"- {ingredient['name']}: {ingredient['quantity']} {ingredient['unit']}")
+            
+# ----------------
+# COOKING HISTORY
+# ----------------
+
+elif menu=="✔️ Cooking History":
+    st.header("✔️ Cooking History")
+    st.subheader("Mark recipe as cooked")
+    recipe_names=recipes['name'].tolist()
+    selected_recipes=st.multiselect("Which recipe did you make?",recipe_names)
+
+    if st.button("Mark as Cooked"):
+        selected_ids=recipes.loc[recipes['name'].isin(selected_recipes),'recipe_id'].tolist()
+
+        for recipe_id in selected_ids:
+            recipes=mark_as_cooked(recipes,recipe_id)
+            
+        save_recipes(recipes,"apprecipes.csv")
+        st.success(f"Marked {len(selected_recipes)} recipe/recipes as cooked today.")
+        recipes_cooked=recipes[recipes['name'].isin(selected_recipes)]
+        st.dataframe(recipes_cooked)
+        
+    st.subheader("Recipes to revisit")
+    stale=suggest_stale_recipes(recipes)
+
+    if stale.empty:
+        st.info("No suggestions in the collection yet.")
+    else:
+        st.dataframe(stale)
+
+    
 
         
 

@@ -3,7 +3,7 @@ from helper import load_recipes, get_all_recipes_summary, get_random_recipe, sea
 
 
 # Load recipe from CSV
-recipes = load_recipes("apprecipes.csv")
+recipes = load_recipes("Project 1/apprecipes.csv")
 
 # App title
 st.title("👨🏼‍🍳 Abdulla's Recipe Manager App")

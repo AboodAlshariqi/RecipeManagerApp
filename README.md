@@ -16,6 +16,8 @@ This app gives you one simple place to store your recipes, search them by ingred
 - **Categorization** — tag recipes as Breakfast, Lunch, Dinner, or Dessert, and browse by category
 - **Ingredient scaling** — adjust any recipe's ingredient quantities to match your desired number of servings
 - **Ratings** — rate recipes 1–5 stars and sort your collection by rating
+- Cooking history — track recipes that have been cooked, record the number of times each recipe was made, and store the latest cooking date. The app can also suggest recipes that have not been cooked recently.
+- Shopping list generation — select multiple recipes and automatically generate a combined shopping list by extracting ingredients and merging duplicate items with their total quantities.
 
 
 ## Tech Used

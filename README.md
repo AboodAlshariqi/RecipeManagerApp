@@ -32,7 +32,7 @@ This app gives you one simple place to store your recipes, search them by ingred
 helper.py         # All core logic — functions for loading, saving, searching,
                    adding, rating, and scaling recipes
                     
-RecipeApp.py       # Streamlit app — the user interface
+recipeapp.py       # Streamlit app — the user interface
 apprecipes.csv     # Recipe data storage (created automatically on first run)
 
 
@@ -42,7 +42,7 @@ apprecipes.csv     # Recipe data storage (created automatically on first run)
 2. Install the required packages:
    pip install streamlit pandas
 3. Run the app:
-   streamlit run RecipeApp.py
+   streamlit run recipeapp.py
    Here is the link to the app (https://recipemanagerapp-fat37gqdwiqnaktktoevd7.streamlit.app/)
 
 

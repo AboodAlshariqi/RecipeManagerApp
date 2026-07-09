@@ -44,6 +44,7 @@ apprecipes.csv     # Recipe data storage (created automatically on first run)
 3. Run the app:
    streamlit run recipeapp.py
    Here is the link to the app (https://recipemanagerapp-fat37gqdwiqnaktktoevd7.streamlit.app/)
+   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
 
 
 

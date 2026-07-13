@@ -1,6 +1,6 @@
 # U.S. Chronic Disease (Diabetes Analysis)
 
-Exploratory Data Analysis of diabetes prevalence and mortality trends across the United States (2010–2021). Built with Python and presented with a professional slide deck.
+Exploratory Data Analysis of diabetes prevalence and mortality trends across the United States (2010–2021). Built with Python and presented using Powerpoint.
 
 ## Problem Statement
 Diabetes is one of the most prevalent chronic diseases among U.S. adults, driving significant long-term health and economic costs nationwide. This project analyzes national and state-level trends to support targeted public health decision-making.

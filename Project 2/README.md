@@ -25,11 +25,12 @@ Diabetes is one of the most prevalent chronic diseases among U.S. adults, drivin
 - Future work suggestions (risk factor analysis, international comparison, etc.)
 
 ## Tech Used
-- **Python** — core analysis
+- **Python**:
 - **pandas** — data manipulation and cleaning
 - **matplotlib / seaborn** — data visualization
-- **Jupyter Notebook** — exploratory analysis and documentation
-- **PowerPoint** — final presentation
+- **Jupyter Notebook** — Code and some explanation
+- **PowerPoint**:
+  — final presentation
 
   
 ## Data Sources

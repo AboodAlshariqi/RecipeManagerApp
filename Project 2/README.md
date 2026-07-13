@@ -36,4 +36,7 @@ Diabetes is one of the most prevalent chronic diseases among U.S. adults, drivin
 
 https://www.kaggle.com/datasets/irakozekelly/u-s-chronic-disease-indicators-2023-release
 
+## Author
+
+Abdulla Alsharqi
 

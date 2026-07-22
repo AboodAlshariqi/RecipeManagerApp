@@ -1,58 +1,43 @@
-# Recipe Manager App
+# U.S. Chronic Disease (Diabetes Analysis)
 
-A digital recipe book built with Python and Streamlit. Store, search, scale, rate, and track your favorite recipes—all backed by a simple CSV file, no database required.
+Exploratory Data Analysis of diabetes prevalence and mortality trends across the United States (2010–2021). Built with Python and presented using Powerpoint.
 
 ## Problem Statement
+Diabetes is one of the most prevalent chronic diseases among U.S. adults, driving significant long-term health and economic costs nationwide. This project analyzes national and state-level trends to support targeted public health decision-making.
 
-This app gives you one simple place to store your recipes, search them by ingredient, get random meal inspiration, and rate them based on what you liked the most.
+## Objectives
+1. Analyze how national diabetes prevalence and mortality have changed from 2010 to 2021, and whether the rate of increase is accelerating.
+2. Identify which U.S. states/territories had the highest and lowest diabetes prevalence in 2021 and their deviation from the national average.
+3. Examine how prevalence differs by gender and race/ethnicity, and whether those gaps have widened or narrowed over the decade.
+
+## Key Findings
+- National age-adjusted diabetes prevalence remained relatively stable (9.0% to 9.6%, 2011–2021), while diabetes-related deaths increased sharply (~213K to ~388K, 2010–2020).
+- Highest burden in Southern states and Puerto Rico; lowest in Colorado and the Northeast.
+- Men consistently show higher prevalence than women.
+- Black, non-Hispanic and Hispanic adults face roughly 1.7× the prevalence of White, non-Hispanic adults.
 
 ## Features
-
-### Core Features
-- **Add a new recipe** — name, ingredients, prep time, instructions, and difficulty level
-- **Search by ingredient** — find every recipe that uses a specific ingredient
-- **View all recipes** — see every recipe's name and prep time at a glance
-- **Random recipe suggestion and scaling** — can't decide what to cook? Let the app pick for you, adjust a random recipe's ingredient quantities to match your desired number of servings.
-- **Categorization** — tag recipes as Breakfast, Lunch, Dinner, or Dessert, and browse by category
-- **Ingredient scaling** — adjust any recipe's ingredient quantities to match your desired number of servings
-- **Ratings** — rate recipes 1–5 stars and sort your collection by rating
-- Cooking history — track recipes that have been cooked, record the number of times each recipe was made, and store the latest cooking date. The app can also suggest recipes that have not been cooked recently.
-- Shopping list generation — select multiple recipes and automatically generate a combined shopping list by extracting ingredients and merging duplicate items with their total quantities.
-
+- Comprehensive national trend analysis (prevalence & mortality)
+- State-by-state comparison with deviation from national average
+- Demographic breakdown by gender and race/ethnicity
+- Data cleaning, visualization, and interpretation
+- Actionable public health recommendations
+- Future work suggestions (risk factor analysis, international comparison, etc.)
 
 ## Tech Used
+- **Python**:
+- **pandas** — data manipulation and cleaning
+- **matplotlib / seaborn** — data visualization
+- **Jupyter Notebook** — Code and some explanation
+- **PowerPoint**:
+  — final presentation
 
-- **Python** — core logic
-- **Streamlit** — interactive web interface
-- **pandas** — data storage and manipulation
-- **CSV** — persistent recipe storage, no database needed
+  
+## Data Sources
 
-## Project Structure
-
-helper.py         # All core logic — functions for loading, saving, searching,
-                   adding, rating, and scaling recipes
-                    
-recipeapp.py       # Streamlit app — the user interface
-apprecipes.csv     # Recipe data storage (created automatically on first run)
-
-
-## How to Run
-
-1. Clone this repository
-2. Install the required packages:
-   pip install streamlit pandas
-3. Run the app:
-   streamlit run recipeapp.py
-
-## DEMO and APP link
-
-   Here is the link to the app (https://recipemanagerapp-mq9pkyev3o5r4kmgjpngkw.streamlit.app/)
-
-   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
-
-
-
+https://www.kaggle.com/datasets/irakozekelly/u-s-chronic-disease-indicators-2023-release
 
 ## Author
 
 Abdulla Alsharqi
+

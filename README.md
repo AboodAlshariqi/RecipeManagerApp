@@ -16,7 +16,13 @@ Electrical Engineer currently studying **Data Science**, with a goal of applying
 ## Featured Project
 
 ### 📁 Project 1
-A full walkthrough of the project — including details, code, documentation, and Readme — is available in the **Project 1** folder/repository.
+A full walkthrough of the project is available in the **Project 1** folder/repository.
+
+### 📁 Project 2
+A full walkthrough of the project is available in the **Project 2** folder/repository.
+
+### 📁 Project 3
+A full walkthrough of the project is available in the **Project 2** folder/repository.
 
 ## Get in Touch
 - 📧 Email: a.alshariqi1810@gmail.com

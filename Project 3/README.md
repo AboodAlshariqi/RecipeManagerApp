@@ -1,56 +1,46 @@
-# Recipe Manager App
+# Car MSRP Prediction App
 
-A digital recipe book built with Python and Streamlit. Store, search, scale, rate, and track your favorite recipes—all backed by a simple CSV file, no database required.
+A machine learning web app built with Python and Streamlit. Estimate the Manufacturer's Suggested Retail Price (MSRP) of a vehicle based on its specifications, performance metrics, and features using a pre-trained regression model.
 
 ## Problem Statement
 
-This app gives you one simple place to store your recipes, search them by ingredient, get random meal inspiration, and rate them based on what you liked the most.
+Navigating the car market can be difficult when trying to determine a fair price for a vehicle. This app gives you a simple, interactive tool to input a car's specifications—such as make, year, engine horsepower, cylinders, and fuel efficiency—and instantly receive a data-driven MSRP estimation to help you make informed buying or selling decisions.
 
 ## Features
 
 ### Core Features
-- **Add a new recipe** — name, ingredients, prep time, instructions, and difficulty level
-- **Search by ingredient** — find every recipe that uses a specific ingredient
-- **View all recipes** — see every recipe's name and prep time at a glance
-- **Random recipe suggestion and scaling** — can't decide what to cook? Let the app pick for you, adjust a random recipe's ingredient quantities to match your desired number of servings.
-- **Categorization** — tag recipes as Breakfast, Lunch, Dinner, or Dessert, and browse by category
-- **Ingredient scaling** — adjust any recipe's ingredient quantities to match your desired number of servings
-- **Ratings** — rate recipes 1–5 stars and sort your collection by rating
-- Cooking history — track recipes that have been cooked, record the number of times each recipe was made, and store the latest cooking date. The app can also suggest recipes that have not been cooked recently.
-- Shopping list generation — select multiple recipes and automatically generate a combined shopping list by extracting ingredients and merging duplicate items with their total quantities.
-
+- **Comprehensive Input Selection** — specify the car's Make, Model, Year, and structural details like Number of Doors and Vehicle Size/Style.
+- **Performance Metrics** — input Engine HP, Engine Cylinders, and Engine Fuel Type to capture the powertrain's value.
+- **Efficiency & Popularity** — factor in City and Highway MPG, along with the car brand's popularity score.
+- **Real-Time Prediction** — instantly calculates the estimated MSRP using a pre-trained machine learning pipeline.
+- **Automated Feature Engineering** — automatically calculates derived metrics (like Engine HP per Cylinder and Engine HP per Year) behind the scenes to feed the model exactly what it needs.
 
 ## Tech Used
 
 - **Python** — core logic
 - **Streamlit** — interactive web interface
-- **pandas** — data storage and manipulation
-- **CSV** — persistent recipe storage, no database needed
+- **pandas** — data structuring and preparation
+- **joblib** — loading the pre-trained machine learning model
+- **scikit-learn** — (backend) used for training the machine learning model pipeline
 
 ## Project Structure
 
-helper.py         # All core logic — functions for loading, saving, searching,
-                   adding, rating, and scaling recipes
-                    
-recipeapp.py       # Streamlit app — the user interface
-apprecipes.csv     # Recipe data storage (created automatically on first run)
-
+app.py           # Streamlit app — the user interface and prediction logic
+model.pkl        # The pre-trained machine learning pipeline/model
+data.csv         # The dataset (optional depending on implementation, used for EDA/training)
 
 ## How to Run
 
 1. Clone this repository
 2. Install the required packages:
-   pip install streamlit pandas
-3. Run the app:
-   streamlit run recipeapp.py
+   pip install streamlit pandas joblib scikit-learn
+3. Ensure `model.pkl` is in the same directory as the script.
+4. Run the app:
+   streamlit run app.py
 
-## DEMO and APP link
+## APP link
 
-   Here is the link to the app (https://recipemanagerapp-mq9pkyev3o5r4kmgjpngkw.streamlit.app/)
-
-   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
-
-
+   Here is the link to the app (Insert your Streamlit Cloud link here)
 
 
 ## Author

@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import streamlit as st
 import tensorflow as tf
@@ -7,10 +9,14 @@ class_names = ['0.5 BHD', '1 BHD', '10 BHD', '20 BHD', '5 BHD']
 
 IMG_SIZE = (64, 64)
 
+# Look for the model next to this file. Streamlit Cloud starts the app from
+# the top of the repository, not from this folder, so a plain file name fails.
+HERE = os.path.dirname(os.path.abspath(__file__))
+
 
 @st.cache_resource
 def get_model():
-    return tf.keras.models.load_model("currency_model.keras")
+    return tf.keras.models.load_model(os.path.join(HERE, "currency_model.keras"))
 
 
 def prepare(data):

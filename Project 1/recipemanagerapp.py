@@ -1,9 +1,15 @@
+import os
 import streamlit as st
 from functions import load_recipes, get_all_recipes_summary, get_random_recipe, search_by_ingredient,add_recipe,save_recipes,filter_by_category,rate_recipe,sort_by_rating,split_ingredients,return_ingredients,scale_recipe,mark_as_cooked,suggest_stale_recipes,generate_shopping_list,merge_ingredients,search_online,get_llm_response,suggest_recipe
 
 
+# Build the CSV path from this file's own location. A plain "apprecipes.csv" is
+# relative to the working directory, which is the repo root once deployed, so the
+# file would not be found there and an empty one would be created instead.
+CSV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "apprecipes.csv")
+
 # Load recipe from CSV
-recipes = load_recipes("apprecipes.csv")
+recipes = load_recipes(CSV_PATH)
 
 # App title
 st.title("👨🏼‍🍳 Abdulla's Recipe Manager App")
@@ -36,7 +42,7 @@ if menu == "➕ Add New Recipe":
         # Add(in dataframe),save, and display new recipe
         else:
             recipes=add_recipe(recipes,name,ingredients,prep_time,instructions,difficulty,category)
-            save_recipes(recipes,"apprecipes.csv")
+            save_recipes(recipes,CSV_PATH)
             st.success("Recipe added successfully")
 
             new_recipe=recipes.iloc[-1]
@@ -132,7 +138,7 @@ elif menu== "⭐ Rate a Recipe":
             if recipes.loc[index, 'name']==selected_recipe:
                 selected_id=recipes.loc[index, 'recipe_id']
         recipes=rate_recipe(recipes, selected_id, rating)
-        save_recipes(recipes, "apprecipes.csv")
+        save_recipes(recipes, CSV_PATH)
         st.success(f"Rated {selected_recipe} as {rating} stars.")
         st.dataframe(sort_by_rating(recipes))
 
@@ -176,7 +182,7 @@ elif menu=="✔️ Cooking History":
         for recipe_id in selected_ids:
             recipes=mark_as_cooked(recipes,recipe_id)
 
-        save_recipes(recipes,"apprecipes.csv")
+        save_recipes(recipes,CSV_PATH)
         st.success(f"Marked {len(selected_recipes)} recipe/recipes as cooked today.")
         recipes_cooked=recipes[recipes['name'].isin(selected_recipes)]
         st.dataframe(recipes_cooked)

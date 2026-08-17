@@ -421,11 +421,14 @@ def get_llm_response(prompt):
     Returns:
     response(str): The LLM's answer, or an error message
     """
-    # Built inside the function so a missing key doesn't stop the whole app
-    client=OpenAI(base_url="https://openrouter.ai/api/v1",
-                  api_key=os.getenv("OPENROUTER_KEY"))
+    # Checked before building the client, because OpenAI() raises immediately on a
+    # missing key and that would crash the page instead of showing a message here
+    key=os.getenv("OPENROUTER_KEY")
+    if not key:
+        return "No API key found. Add OPENROUTER_KEY to your .env file (or to the app's secrets if deployed)."
 
     try:
+        client=OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
         completion=client.chat.completions.create(
             model="openrouter/free",
             messages=[

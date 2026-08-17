@@ -46,7 +46,6 @@ functions.py          # All core logic — loading, saving, searching, adding, r
                       # scaling, cooking history, shopping list, and both API calls
 recipemanagerapp.py   # Streamlit app — the user interface
 apprecipes.csv        # Recipe data storage (created automatically on first run)
-requirements.txt      # Python dependencies
 .env                  # Your API key (not committed — see Setup)
 ```
 
@@ -54,9 +53,9 @@ requirements.txt      # Python dependencies
 
 1. Clone this repository and open the `Project 1` folder.
 
-2. Install the required packages:
+2. Install the required packages. `requirements.txt` lives in the repository root:
    ```
-   pip install -r requirements.txt
+   pip install -r ../requirements.txt
    ```
 
 3. Set up your API key. Create a file named `.env` next to `recipemanagerapp.py` containing:

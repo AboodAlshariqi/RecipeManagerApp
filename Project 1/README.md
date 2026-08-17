@@ -23,6 +23,12 @@ This app gives you one simple place to store your recipes, search them by ingred
 - **Search Online** — search [TheMealDB](https://www.themealdb.com/api.php) for new recipe ideas by dish name. Results show the meal photo, category, area of origin, and full instructions. No API key needed for this one.
 - **Ask the AI Chef** — type in what you have in your kitchen and an LLM reads your saved recipe collection, picks the recipe that best matches, and tells you what you still need to buy. Runs through [OpenRouter](https://openrouter.ai/); requires an API key (see Setup below).
 
+## DEMO and APP link
+
+   Here is the link to the app (https://recipemanagerapp-mq9pkyev3o5r4kmgjpngkw.streamlit.app/)
+
+   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
+
 ## Tech Used
 
 - **Python** — core logic
@@ -70,12 +76,6 @@ requirements.txt      # Python dependencies
 
 - `.env` is listed in `.gitignore` on purpose, so the API key is never pushed to GitHub. Anyone cloning this repository needs to create their own.
 - Ingredients are stored in the format `name:quantity:unit`, separated by commas — for example `Flour:200:g, Milk:300:ml, Eggs:2:whole`. This is what allows the app to scale recipes and merge duplicate items into a shopping list.
-
-## DEMO and APP link
-
-   Here is the link to the app (https://recipemanagerapp-mq9pkyev3o5r4kmgjpngkw.streamlit.app/)
-
-   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
 
 ## Author
 

@@ -25,9 +25,7 @@ This app gives you one simple place to store your recipes, search them by ingred
 
 ## DEMO and APP link
 
-   Here is the link to the app (https://recipemanagerapp-mq9pkyev3o5r4kmgjpngkw.streamlit.app/)
-
-   DEMO VIDEO of the app (https://videotourl.com/videos/1783625914593-40219336-e986-47ed-a1e5-ea152fdc9786.mp4)
+   Here is the link to the app (https://recipemanagerapp-ircwshrxwzc4wfhs49ecnh.streamlit.app/)
 
 ## Tech Used
 

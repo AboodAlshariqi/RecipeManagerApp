@@ -1,11 +1,11 @@
-streamlit
-numpy
-pandas
+# Dependencies for the deployed Streamlit app (Project 1 - Recipe Manager App).
+# Streamlit Community Cloud installs from this root file.
+# Other projects in this repo keep their own requirements.txt in their own folder
+# (see jewelry_search/requirements.txt) so their heavier dependencies are not
+# installed here.
 
-# Project 1 - Recipe Manager App
+streamlit
+pandas
 requests
 python-dotenv
 openai
-
-# jewelry_search
-tensorflow-cpu==2.21.0
